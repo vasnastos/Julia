@@ -17,12 +17,14 @@ array3=[0:10...]
 println(array3)
 #[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+#Comprehension
 array4=[x for x in range(1,length=20,stop=100)]
 println(array4)
 
 #Matrix of Random numbers
 println(rand(3,3))
 
+#Fill table with ones
 array6=ones(6)
 array7=[5,6,7,8,9,10]
 println(array6)
@@ -44,7 +46,7 @@ println(tdarray)
 arraycopy=similar(array)
 print("Original:")
 println(array)
-print("Copy:")
+print("Copy with same size:")
 println(arraycopy)
 
 #for loop
@@ -78,4 +80,11 @@ print("After Popping Elements:")
 pop!(array)
 splice!(array,1)
 popfirst!(array)
+println(array)
+
+#Sort table
+push!(array,10)
+push!(array,20)
+array=sort(array; alg=QuickSort)
+print('Sorted Table:')
 println(array)
